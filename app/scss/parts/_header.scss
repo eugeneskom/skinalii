@@ -1,0 +1,104 @@
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 99;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+  }
+
+  &__mobile,
+  &__landline {
+    text-align: right;
+  }
+
+  &__phone {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 19px;
+    @include bold;
+    text-decoration: none;
+    color: $text-color;
+  }
+
+  &__small-text {
+    display: block;
+    font-size: 14px;
+    color: $text-color-light;
+    text-decoration: none;
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  padding: 16px 0;
+  background-color: $primary;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+  &--active{
+    transform: translateY(0);
+    transition: transform 0.3s;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #fff;
+  }
+}
+
+.menu-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-right: 1px solid rgba(#510bba, 0.1);
+  border-left: 1px solid rgba(#510bba, 0.1);
+  height: 80px;
+  width: 70px;
+  cursor: pointer;
+
+  &__line {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: #89a9eb;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.logo {
+  &__text {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    @include bold;
+  }
+
+  &__description {
+    display: block;
+    font-size: 14px;
+    color: $text-color-light;
+    font-size: 14px;
+  }
+}

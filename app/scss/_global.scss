@@ -1,3 +1,49 @@
+body{
+  @include light;
+  color: $text-color;
+}
+
+.button{
+  padding: 25px 45px;
+  text-transform: uppercase;
+  border: none;
+  background-color: $primary;
+  color: #fff;
+  @include bold;
+}
+
+.button-o{
+  border: 2px solid $primary;
+  padding: 17px 22px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $primary;
+  @include bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .sr-only {
