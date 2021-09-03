@@ -2,4 +2,15 @@
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+
+  @include r($r-xl){
+    max-width: 960px;
+  }
+  @include r($r-lg){
+    max-width: 750px;
+  }
+  @include r($r-md){
+    max-width: 100%;
+  }
+
 }

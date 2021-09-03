@@ -14,11 +14,16 @@ body{
 
 .button-o{
   border: 2px solid $primary;
+  background-color: #fff;
   padding: 17px 22px;
   font-size: 12px;
   text-transform: uppercase;
   color: $primary;
   @include bold;
+
+  @include r($r-sm){
+    font-size: 10px;
+  }
 }
 
 
