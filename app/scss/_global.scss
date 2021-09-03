@@ -1,0 +1,54 @@
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.show {
+  display: block;
+}
+
+
+.d-flex {
+  display: flex;
+}
+
+.fd-col {
+  flex-direction: column;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.ai-s {
+  align-items: stretch;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.jc-sa {
+  justify-content: space-around;
+}
+
+.fw-w {
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+}
