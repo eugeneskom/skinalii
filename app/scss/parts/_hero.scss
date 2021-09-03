@@ -1,11 +1,11 @@
 .hero{
-  background: #f1f1f1 url('../images/hero/hero.jpg') no-repeat center top 80px;
-  background-size: contain;
-  padding: 180px 0 270px;
+  background: #f1f1f1 url('../images/hero/hero.jpg') no-repeat center top;
+  background-size: cover;
+  padding: 120px 0 270px;
 
   @include r($r-lg){
-    background-size: cover;
-    background-position: top left 30%;
+    background-size: 100%;
+    background-position: top  right;
   }
 
   &__title{
