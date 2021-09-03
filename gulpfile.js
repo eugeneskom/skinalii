@@ -26,7 +26,9 @@ function fileInclude() {
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(dest('app'))
+    .pipe(dest('app'))//
+    .pipe(dest('dist/html'))
+    .pipe(dest('.'))
     .pipe(browserSync.stream());
 }
 
@@ -42,7 +44,10 @@ function styles() {
       overrideBrowserslist: ['last 10 versions'],
       grid: true
     }))
-    .pipe(dest('app/css'))
+    .pipe(dest('app/css')) //
+    .pipe(dest('dist/css')) 
+    .pipe(dest('css')) 
+
     .pipe(browserSync.stream())
 }
 
@@ -77,7 +82,9 @@ function scripts() {
   ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
-    .pipe(dest('app/js'))
+    .pipe(dest('app/js'))//
+    .pipe(dest('dist/js'))
+    .pipe(dest('js'))
     .pipe(browserSync.stream())
 }
 
