@@ -1,3 +1,11 @@
+.header {
+  margin-bottom: 80px;
+
+  @include r($r-sm) {
+    margin-bottom: 60px;
+  }
+}
+
 .navbar {
   position: fixed;
   left: 0;
@@ -14,7 +22,8 @@
   &__mobile,
   &__landline {
     text-align: right;
-    @include r($r-lg){
+
+    @include r($r-lg) {
       display: none;
     }
   }
@@ -43,23 +52,26 @@
   padding: 16px 0;
   background-color: $primary;
   transform: translateY(-200%);
+  opacity: 0;
   transition: transform 0.3s;
-  
 
-  @include r($r-md){
+
+  @include r($r-md) {
     top: 60px;
   }
 
-  &--active{
+  &--active {
     transform: translateY(0);
     transition: transform 0.3s;
+    opacity: 1;
   }
 
   &__nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    @include r($r-sm){
+
+    @include r($r-sm) {
       flex-direction: column;
     }
   }
@@ -68,8 +80,9 @@
     text-transform: uppercase;
     font-size: 17px;
     color: #fff;
-    @include r($r-sm){
-      &:not(:last-child){
+
+    @include r($r-sm) {
+      &:not(:last-child) {
         margin-bottom: 20px;
       }
     }
@@ -89,9 +102,10 @@
   width: 70px;
   cursor: pointer;
 
-  @include r($r-sm){
+  @include r($r-sm) {
     height: 60px;
   }
+
   &__line {
     display: block;
     width: 20px;
@@ -105,9 +119,10 @@
 }
 
 .logo {
-  @include r($r-sm){
+  @include r($r-sm) {
     display: none;
   }
+
   &__text {
     display: block;
     margin-bottom: 5px;
