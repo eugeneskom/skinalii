@@ -27,10 +27,15 @@ body{
 }
 
 
+.bg-secondary{
+  background-color: $bg-secondary;
+}
 
-
-
-
+.input{
+  height: 80px;
+  padding-left: 30px;
+  border: 1px solid #dddddd;
+}
 
 
 

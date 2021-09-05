@@ -26,7 +26,6 @@ function fileInclude() {
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(dest('app'))//
     .pipe(dest('dist/html'))
     .pipe(dest('.'))
     .pipe(browserSync.stream());
@@ -36,7 +35,6 @@ function fileInclude() {
 function styles() {
   return src('app/scss/*.scss')
     .pipe(scss({ outputStyle: 'compressed' }))
-    // .pipe(concat(''))
     .pipe(rename({
       suffix: '.min'
     }))
@@ -85,7 +83,7 @@ function scripts() {
     .pipe(dest('app/js'))//
     .pipe(dest('dist/js'))
     .pipe(dest('js'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.reload())
 }
 
 

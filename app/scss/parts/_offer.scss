@@ -1,0 +1,161 @@
+.offer {
+  padding: 129px 0;
+
+  &__title {
+    font-size: 25px;
+    text-transform: uppercase;
+    @include bold;
+    margin-bottom: 20px;
+    @include r($r-md){
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 21px;
+    display: block;
+    margin-bottom: 48px;
+    @include r($r-md){
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+}
+
+.offer-block {
+  padding: 80px;
+  background: #fff url('../images/offer/offer-bg.png') no-repeat center right;
+  background-size: contain;
+  margin-top: -200px;
+  box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1);
+
+  @include r($r-xl) {
+    background-position: center right -125px;
+  }
+
+  @include r($r-lg) {
+    background-position: center right -180px;
+  }
+
+  @include r($r-md) {
+    background-image: none;
+    padding: 30px;
+  }
+
+}
+
+.form {
+  &__row {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+
+    @include r($r-md) {
+      flex-direction: column;
+
+      &--checkbox {
+        flex-direction: row;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 15px;
+
+  }
+
+  &__group {
+    flex-basis: calc(100% / 3);
+
+    @include r($r-md) {
+      flex-basis: 100%;
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+
+    &:not(:last-child) {
+      .form__input {
+        border-right-width: 0px;
+
+        @include r($r-md) {
+          border-right-width: 1px;
+
+        }
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+  }
+
+  &__button {
+    height: 80px;
+    width: 100%;
+  }
+
+  &__checkbox {
+    .form__label {
+      display: inline;
+    }
+  }
+}
+
+.checkbox {
+
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    padding-left: 50px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      border: 1px solid #dddddd;
+      appearance: none;
+    }
+  }
+
+  &__input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+
+    &:checked+label:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 13px;
+      width: 6px;
+      height: 14px;
+      border: solid $primary;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+}
