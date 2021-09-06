@@ -26,7 +26,8 @@ function fileInclude() {
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(dest('dist/html'))
+    // .pipe(dest('dist/html'))
+    .pipe(dest('app'))
     .pipe(dest('.'))
     .pipe(browserSync.stream());
 }
@@ -43,7 +44,7 @@ function styles() {
       grid: true
     }))
     .pipe(dest('app/css')) //
-    .pipe(dest('dist/css')) 
+    // .pipe(dest('dist/css')) 
     .pipe(dest('css')) 
 
     .pipe(browserSync.stream())
@@ -63,7 +64,8 @@ function images() {
         ]
       })
     ]))
-    .pipe(dest('dist/images'))
+    // .pipe(dest('dist/images'))
+    .pipe(dest('images'))
 }
 
 function scripts() {
@@ -81,7 +83,7 @@ function scripts() {
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js'))//
-    .pipe(dest('dist/js'))
+    // .pipe(dest('dist/js'))
     .pipe(dest('js'))
     .pipe(browserSync.stream())
 }

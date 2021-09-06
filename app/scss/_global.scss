@@ -1,9 +1,33 @@
-body{
+body {
   @include light;
   color: $text-color;
 }
 
-.button{
+
+.title {
+  font-size: 30px;
+  @include bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+.section {
+  padding: 100px 0;
+  @include r($r-md){
+    padding: 60px 0;
+  }
+  &__title {
+    margin-bottom: 100px;
+
+    @include r($r-md) {
+      font-size: 24px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.button {
   padding: 25px 45px;
   text-transform: uppercase;
   border: none;
@@ -12,7 +36,7 @@ body{
   @include bold;
 }
 
-.button-o{
+.button-o {
   border: 2px solid $primary;
   background-color: #fff;
   padding: 17px 22px;
@@ -21,17 +45,17 @@ body{
   color: $primary;
   @include bold;
 
-  @include r($r-sm){
+  @include r($r-sm) {
     font-size: 10px;
   }
 }
 
 
-.bg-secondary{
+.bg-secondary {
   background-color: $bg-secondary;
 }
 
-.input{
+.input {
   height: 80px;
   padding-left: 30px;
   border: 1px solid #dddddd;
