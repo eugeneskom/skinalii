@@ -83,7 +83,7 @@ function scripts() {
     .pipe(dest('app/js'))//
     .pipe(dest('dist/js'))
     .pipe(dest('js'))
-    .pipe(browserSync.reload())
+    .pipe(browserSync.stream())
 }
 
 
