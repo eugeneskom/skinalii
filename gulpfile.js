@@ -35,7 +35,7 @@ function fileInclude() {
 
 function styles() {
   return src('app/scss/*.scss')
-    .pipe(scss({ outputStyle: 'compressed' }))
+    .pipe(scss({ outputStyle: 'extanded' }))
     .pipe(rename({
       suffix: '.min'
     }))

@@ -1,13 +1,15 @@
 @import 'reset';
 @import 'vars';
 @import 'libs';
-@import 'mixins';
 @import 'fonts';
+@import 'mixins';
 @import 'global';
 @import 'grid';
 @import 'parts/header';
 @import 'parts/hero';
 @import 'parts/offer';
 @import 'parts/features';
-@import 'parts/catalog';
 @import 'components/catalog-item';
+@import 'parts/catalog';
+@import 'parts/blog';
+@import 'components/blog-card';

@@ -1,17 +1,88 @@
-.catalog-item{
+.catalog-item {
+  position: relative;
   background-repeat: no-repeat;
+  max-width: 570px;
   width: 100%;
-  height: 200px;
-  &__button{
+  height: 130px;
+  box-shadow: 6.553px 4.589px 21px 0px rgba(0, 0, 0, 0.1);
+  background-position: top -11px right -22px;
+  object-fit: contain;
+  overflow: hidden;
+
+  @include r($r-lg){
+    margin: 0 auto ;
+  }
+
+
+  &:hover {
+    .catalog-item__list {
+      transform: translateY(0)
+    }
+  }
+
+  &__button {
     background-color: transparent;
     border: none;
   }
-  // &__svg{
-  //   width: 14px;
-  //   height: 12px;
-  //   path{
-  //     fill: #000;
-  //   }
-  // }
-  
+
+  &__tag {
+    position: absolute;
+    display: block;
+    top: 15px;
+    left: 15px;
+    @include r($r-sm){
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+    @include r($r-md){
+      transform: translateY(0);
+    }
+  }
+
+  &__tag,
+  &__button {
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+    background-color: lighten($primary, 10%);
+    color: #ffffff;
+    cursor: pointer;
+    @include bold;
+
+    @include r($r-sm){
+      padding: 5px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: #ffffff;
+      color: #92adeb;
+    }
+  }
+
+  &__button {
+    &--like {
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+        background-color: #417cde;
+      }
+    }
+  }
+
+  &__svg {
+    width: 12px;
+    height: 14px;
+  }
+
 }

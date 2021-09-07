@@ -1,11 +1,63 @@
-
-
-
 <section class="section catalog">
   <div class="container">
-    @@include('../components/_catalog-item.html',{
-      "catalog-image": 1,
-      "collection": "Абстракция"
-    })
+    <h2 class="title section__title">Каталог скинали</h2>
+    <div class="catalog__wrapper">
+
+      <div class="catalog__card">
+        @@include('../components/_catalog-item.html',{
+        "catalog-image": 1,
+        "collection": "Коллажи"
+        })
+      </div>
+      <div class="catalog__card">
+        @@include('../components/_catalog-item.html',{
+        "catalog-image": 2,
+        "collection": "Авторская коллекция"
+        })
+      </div>
+      <div class="catalog__card">
+        @@include('../components/_catalog-item.html',{
+        "catalog-image": 3,
+        "collection": "Коллажи"
+        })
+      </div>
+      <div class="catalog__card">
+        @@include('../components/_catalog-item.html',{
+        "catalog-image": 4,
+        "collection": "Авторская коллекция"
+        })
+      </div>
+      <div class="catalog__card">
+        @@include('../components/_catalog-item.html',{
+        "catalog-image": 5,
+        "collection": "Коллажи"
+        })
+      </div>
+      <div class="catalog__card">
+        @@include('../components/_catalog-item.html',{
+        "catalog-image": 6,
+        "collection": "Абстракция"
+        })
+      </div>
+      <div class="catalog__card">
+        @@include('../components/_catalog-item.html',{
+        "catalog-image": 7,
+        "collection": "Коллажи"
+        })
+      </div>
+      <div class="catalog__card">
+        @@include('../components/_catalog-item.html',{
+        "catalog-image": 8,
+        "collection": "Абстракция"
+        })
+      </div>
+
+    </div>
+    <div class="catalog__more">
+      <a class="button catalog__link" href="#">Cмотреть весь каталог скинали</a>
+      <span class="catalog__text">Более 3000 изображений скинали в 25 рубриках</span>
+    </div>
+    
+    
   </div>
 </section>
