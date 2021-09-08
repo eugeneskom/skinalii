@@ -34,6 +34,7 @@ body {
   background-color: $primary;
   color: #fff;
   @include bold;
+  cursor: pointer;
 }
 
 .button-o {
@@ -43,6 +44,7 @@ body {
   font-size: 12px;
   text-transform: uppercase;
   color: $primary;
+  cursor: pointer;
   @include bold;
 
   @include r($r-sm) {

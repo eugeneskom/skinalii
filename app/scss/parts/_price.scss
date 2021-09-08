@@ -1,0 +1,27 @@
+.price {
+  background-color: #f1f1f1; // need to delete once section is done
+
+  &__wrapper {
+    @include r($r-xl) {
+      justify-content: start;
+    }
+    @include r($r-lg){
+      justify-content: space-around;
+    }
+  }
+
+
+  &__card {
+    margin-bottom: 20px;
+    flex-basis: calc((100% - 30px) / 4);
+
+    @include r($r-xl) {
+      padding: 10px;
+      flex-basis: calc(100%  / 3);
+    }
+    @include r($r-lg){
+      flex-basis: 285px;
+    }
+  }
+
+}

@@ -6,7 +6,8 @@
     text-transform: uppercase;
     @include bold;
     margin-bottom: 20px;
-    @include r($r-md){
+
+    @include r($r-md) {
       font-size: 20px;
     }
   }
@@ -15,7 +16,8 @@
     font-size: 21px;
     display: block;
     margin-bottom: 48px;
-    @include r($r-md){
+
+    @include r($r-md) {
       font-size: 16px;
       margin-bottom: 20px;
     }
@@ -46,6 +48,7 @@
 }
 
 .form {
+
   &__row {
     display: flex;
     align-items: center;
@@ -53,9 +56,16 @@
 
     @include r($r-md) {
       flex-direction: column;
+    }
 
-      &--checkbox {
+    &--checkbox {
+      @include r($r-md) {
         flex-direction: row;
+      }
+
+      @include r($r-sm) {
+        flex-direction: column;
+        align-items: start;
       }
     }
 
@@ -68,7 +78,6 @@
     display: block;
     font-size: 17px;
     margin-bottom: 15px;
-
   }
 
   &__group {
@@ -93,6 +102,15 @@
         }
       }
     }
+  }
+
+  &__checkbox {
+    @include r($r-sm) {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
   }
 
   &__input {
