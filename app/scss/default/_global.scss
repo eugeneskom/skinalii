@@ -14,9 +14,11 @@ body {
 
 .section {
   padding: 100px 0;
-  @include r($r-md){
+
+  @include r($r-md) {
     padding: 60px 0;
   }
+
   &__title {
     margin-bottom: 100px;
 

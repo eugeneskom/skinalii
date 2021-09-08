@@ -1,11 +1,11 @@
 .price {
-  background-color: #f1f1f1; // need to delete once section is done
 
   &__wrapper {
     @include r($r-xl) {
       justify-content: start;
     }
-    @include r($r-lg){
+
+    @include r($r-lg) {
       justify-content: space-around;
     }
   }
@@ -17,9 +17,10 @@
 
     @include r($r-xl) {
       padding: 10px;
-      flex-basis: calc(100%  / 3);
+      flex-basis: calc(100% / 3);
     }
-    @include r($r-lg){
+
+    @include r($r-lg) {
       flex-basis: 285px;
     }
   }

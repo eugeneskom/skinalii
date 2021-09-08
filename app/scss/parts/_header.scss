@@ -11,7 +11,7 @@
   left: 0;
   top: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: $bg-main;
   z-index: 99;
   &__wrap {
     display: flex;
@@ -79,7 +79,7 @@
   &__link {
     text-transform: uppercase;
     font-size: 17px;
-    color: #fff;
+    color: $bg-main;
 
     @include r($r-sm) {
       &:not(:last-child) {
