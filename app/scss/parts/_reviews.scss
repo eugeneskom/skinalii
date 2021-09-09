@@ -1,6 +1,10 @@
 .reviews {
   background-color: $bg-section;
 
+  &__list{
+    margin-bottom: 100px;
+  }
+
   &__item {
     flex-basis: calc((100% - 60px) / 3);
     max-width: 370px;

@@ -16,6 +16,7 @@
     font-size: 21px;
     display: block;
     margin-bottom: 48px;
+    max-width: 820px;
 
     @include r($r-md) {
       font-size: 16px;
@@ -27,17 +28,26 @@
 
 .offer-block {
   padding: 80px;
-  background: $bg-main url('../images/offer/offer-bg.png') no-repeat center right;
-  background-size: contain;
   margin-top: -200px;
   box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1);
+
+  &--calc {
+    background: $bg-main url('../images/offer/offer-bg.png') no-repeat center right;
+    background-size: contain;
+  }
+
+  &--cheaper {
+    background: $bg-main url('../images/cheaper/cheaper-bg.png') no-repeat center right;
+    background-size: contain;
+  }
 
   @include r($r-xl) {
     background-position: center right -125px;
   }
 
   @include r($r-lg) {
-    background-position: center right -180px;
+    background-image: none;
+    background-color: $bg-main;
   }
 
   @include r($r-md) {
@@ -120,12 +130,22 @@
   &__button {
     height: 80px;
     width: 100%;
+    &--cheaper{
+      margin-right: 45px;
+    }
   }
 
   &__checkbox {
     .form__label {
       display: inline;
     }
+  }
+
+  &__policy{
+    margin-left: 45px;
+    font-size: 17px;
+    max-width: 370px;
+    width: 100%;
   }
 }
 
