@@ -1,0 +1,42 @@
+.factory {
+
+  &__wrapper {
+    padding: 0 100px;
+
+    @include r($r-xl) {
+      padding: 0;
+    }
+
+    @include r($r-md) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__img-box {
+    flex-basis: 370px;
+    max-width: 370px;
+    max-height: 270px;
+    margin-right: 20px;
+
+    @include r($r-md) {
+      margin: 0 0 40px 0;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    max-width: 515px;
+    width: 100%;
+    font-size: 20px;
+
+    @include r($r-md) {
+      max-width: 100%;
+    }
+  }
+}
