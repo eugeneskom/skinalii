@@ -10,6 +10,8 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const fileinclude = require('gulp-file-include');
 
+
+
 function browsersync() {
   browserSync.init({
     server: {
@@ -28,7 +30,7 @@ function fileInclude() {
     }))
     // .pipe(dest('dist/html'))
     .pipe(dest('app'))
-    .pipe(dest('.'))
+    // .pipe(dest('.'))
     .pipe(browserSync.stream());
 }
 
@@ -45,7 +47,7 @@ function styles() {
     }))
     .pipe(dest('app/css')) //
     // .pipe(dest('dist/css')) 
-    .pipe(dest('css')) 
+    // .pipe(dest('css'))
 
     .pipe(browserSync.stream())
 }
@@ -84,7 +86,7 @@ function scripts() {
     .pipe(uglify())
     .pipe(dest('app/js'))//
     // .pipe(dest('dist/js'))
-    .pipe(dest('js'))
+    // .pipe(dest('js'))
     .pipe(browserSync.stream())
 }
 

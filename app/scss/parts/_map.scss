@@ -1,0 +1,19 @@
+.question{
+
+  &__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include bold;
+  }
+  &__title{
+    margin-right: 40px;
+    font-size: 30px;
+  }
+  &__link{
+    color: $primary;
+    text-decoration: underline;
+    font-size: 24px;
+  }
+
+}

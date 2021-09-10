@@ -1,0 +1,19 @@
+.footer{
+  background-color: $text-color;
+  color: #fff;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.social{
+
+  &__svg{
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+    object-fit: cover;
+  }
+
+}
