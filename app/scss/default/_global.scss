@@ -10,6 +10,10 @@ body {
   text-transform: uppercase;
   text-align: center;
 }
+.footer-title{
+  font-size: 18px;
+  @include bold;
+}
 
 
 .section {
