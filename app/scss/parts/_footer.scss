@@ -6,9 +6,20 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include r($r-md){
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__col{
     flex-basis: 1;
+
+    @include r($r-md){
+      &:not(:last-child){
+        margin-bottom: 50px;
+      }
+    }
     &--first{
       display: flex;
       flex-direction: column;
