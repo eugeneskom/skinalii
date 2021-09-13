@@ -1,0 +1,66 @@
+.before-slider {
+  max-width: 900px;
+  margin: auto;
+}
+
+.before-after {
+  // max-height: 400px;
+
+  &__img {
+    object-fit: contain;
+  }
+}
+
+
+.slick-slider {
+  position: relative;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  outline: none;
+
+  &--prev {
+    left: -65px;
+  }
+
+  &--next {
+    right: -65px;
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -30px;
+  display: flex;
+  font-size: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  li{
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+    &.slick-active{
+      button{
+        background-color: $primary;
+      }
+    }
+  }
+
+  button {
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+
+
+  }
+}

@@ -13,6 +13,7 @@
   width: 100%;
   background-color: $bg-main;
   z-index: 99;
+
   &__wrap {
     display: flex;
     align-items: center;
@@ -53,7 +54,8 @@
   background-color: $primary;
   transform: translateY(-200%);
   opacity: 0;
-  transition: transform 0.3s;
+  transition: all 0.3s;
+  z-index: 1;
 
 
   @include r($r-md) {
@@ -71,7 +73,9 @@
     align-items: center;
     justify-content: space-around;
 
-    @include r($r-sm) {
+
+    @include r($r-md) {
+      padding-top: 20px;
       flex-direction: column;
     }
   }
@@ -80,6 +84,16 @@
     text-transform: uppercase;
     font-size: 17px;
     color: $bg-main;
+    &:hover{
+     text-shadow: 1px 0 0 #fff;
+    }
+
+    @include r($r-md) {
+      display: block;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+    }
 
     @include r($r-sm) {
       &:not(:last-child) {
@@ -102,18 +116,54 @@
   width: 70px;
   cursor: pointer;
 
+
+
   @include r($r-sm) {
     height: 60px;
   }
 
-  &__line {
-    display: block;
-    width: 20px;
-    height: 3px;
-    background-color: #89a9eb;
 
-    &:not(:last-child) {
-      margin-bottom: 5px;
+}
+
+.navicon {
+  display: block;
+  height: 3px;
+  width: 20px;
+  background-color: #89a9eb;
+  position: relative;
+  transition: background-color 0.2s;
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    background-color: #89a9eb;
+    transition: transform 0.3s;
+
+  }
+
+  &::before {
+    top: -5px;
+  }
+
+  &::after {
+    bottom: -5px;
+  }
+
+  &--active {
+    background-color: transparent;
+
+    &::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+      transform: rotate(-45deg);
     }
   }
 }

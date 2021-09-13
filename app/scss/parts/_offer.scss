@@ -130,7 +130,8 @@
   &__button {
     height: 80px;
     width: 100%;
-    &--cheaper{
+
+    &--cheaper {
       margin-right: 45px;
     }
   }
@@ -141,11 +142,58 @@
     }
   }
 
-  &__policy{
+  &__policy {
     margin-left: 45px;
     font-size: 17px;
     max-width: 370px;
     width: 100%;
+  }
+}
+
+.select {
+  height: 80px;
+  width: 100%;
+  border: 1px solid #dddddd;
+  position: relative;
+  z-index: 1;
+  &:hover{
+    cursor: pointer;
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 10px;
+    background-color: $bg-main;
+    background: url('../images/offer/caret.png') no-repeat center;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+  }
+
+  &__checked {
+    padding-left: 30px;
+    line-height: 80px;
+  }
+  &__dropdown{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    background-color: $bg-main;
+    border: 1px solid #dddddd;
+    display: none;
+    &--active{
+      display: block;
+    }
+
+  }
+
+  &__option{
+    padding: 20px;
+    &:hover{
+      background-color: $bg-secondary;
+    }
   }
 }
 

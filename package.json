@@ -32,6 +32,7 @@
   "dependencies": {
     "save-dev": "0.0.1-security",
     "swiper": "^6.5.0",
-    "urix": "^0.1.0"
+    "urix": "^0.1.0",
+    "zurb-twentytwenty": "^0.1.1"
   }
 }
