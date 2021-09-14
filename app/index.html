@@ -31,9 +31,6 @@
         <div class="navbar__wrap">
           <button class="menu-button navbar__menu-button">
             <span class="navicon"></span>
-            <!-- <span class="menu-button__line"></span>
-            <span class="menu-button__line"></span>
-            <span class="menu-button__line"></span> -->
           </button>
           <div class="logo navbar__logo">
             <srtong class="logo__text">фабрика скинали №1</srtong>
@@ -47,7 +44,7 @@
             <a class="navbar__phone" href="tel:+39121234567">+7 912 123-45-67</a>
             <a class="navbar__mail navbar__small-text" href="mailto:info@mail.com">info@mail.com</a>
           </div>
-          <button class="button-o navbar__button">получить консультацию</button>
+          <a class="button-o navbar__button" href="#offer">получить консультацию</a>
         </div>
       </div>
     </div>
@@ -62,7 +59,7 @@
 </div>
 
 <main class="main">
-  <section class="offer bg-secondary">
+  <section class="offer bg-secondary" id="offer">
   <div class="container">
     <div class="offer__block offer-block offer-block--calc">
       <h2 class="offer__title">Оставьте заявку на расчет</h2>
@@ -86,18 +83,20 @@
 
           </div>
 
+
+
           <div class="form__group">
             <label class="form__label">
               Ширина, см
             </label>
-            <input type="text" class="input form__input">
+            <input type="number" class="input form__input">
           </div>
 
           <div class="form__group">
             <label class="form__label">
               Высота, см
             </label>
-            <input type="text" class="input form__input">
+            <input type="number" class="input form__input">
           </div>
 
         </div>
@@ -127,7 +126,7 @@
           </div>
 
           <div class="form__group">
-            <input class="input form__input" type="text" placeholder="Ваш телефон">
+            <input class="input form__input" type="tel" placeholder="Ваш телефон">
           </div>
 
           <div class="form__group">
@@ -650,7 +649,7 @@
           </div>
 
           <div class="form__group">
-            <input type="text" class="input form__input" placeholder="Ваш телефон">
+            <input type="tel" class="input form__input" placeholder="Ваш телефон">
           </div>
 
           <div class="form__group">

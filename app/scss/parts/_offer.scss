@@ -245,3 +245,51 @@
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+///@at-root
+*{box-sizing:border-box;}
+.select{
+  border: 1px solid #eee;
+  width: 200px;
+}
+
+.select__head{
+  padding: 10px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  cursor: pointer;
+}
+.select__head:after{
+    content: "\25bc";
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+
+  }
+
+.select__body{
+  display: none;
+}
+.select__body--active{
+  display: block;
+}
+.select__body{
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  list-style-type:none;
+}

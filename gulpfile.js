@@ -76,6 +76,7 @@ function scripts() {
     'node_modules/zurb-twentytwenty/js/jquery.event.move.js',
     'node_modules/zurb-twentytwenty/js/jquery.twentytwenty.js',
     'node_modules/slick-slider/slick/slick.js',
+    'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
     'app/js/main.js'
 
   ])

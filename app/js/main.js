@@ -27,12 +27,31 @@ menuBtn.addEventListener('click', () => {
 
 // Select set up
 
-$('.select__checked').on('click', function () {
-  $('.select__dropdown').toggleClass('select__dropdown--active');
-});
-$('.select__option').on('click', function () {
-  let value = $(this).attr('data-value');
-  $('#select-type').val(value);
-  $('.select__checked').text(value);
-  $('.select__dropdown').toggleClass('select__dropdown--active');
-});
+
+let input = document.querySelector('#select-type');
+let selectChecked = document.querySelector('.select__checked');
+let selectBody = document.querySelector('.select__dropdown');
+
+selectChecked.addEventListener('click', () => {
+  selectBody.classList.toggle('select__dropdown--active')
+})
+selectBody.addEventListener('click', (e) => {
+  let option = e.target.innerHTML;
+  console.log(option);
+  selectBody.classList.toggle('select__dropdown--active')
+  selectChecked.innerHTML = option;
+  input.setAttribute('value', option)
+})
+
+
+
+//scroll to the exact place script
+$("a[href^='#'").on('click', function(){
+  let _href = $(this).attr("href");
+  $("html, body").animate({scrollTop: $(_href).offset().top -150 + "px"});
+  return false;
+})
+
+ // jquery mask
+
+ $('input[type="tel"]').mask("+7 (999) 999-99-99");
